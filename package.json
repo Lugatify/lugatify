@@ -1,0 +1,21 @@
+{
+  "name": "lugatify-az",
+  "version": "1.0.0",
+  "description": "🇦🇿 Lugatify API üçün Azərbaycan dilində rəsmi NPM modulu",
+  "main": "index.js",
+  "keywords": [
+    "lugatify",
+    "azerbaijan",
+    "azərbaycan",
+    "api",
+    "lugat",
+    "sozluk",
+    "dictionary",
+    "az"
+  ],
+  "author": "Adını Yaz",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.6.9"
+  }
+}
