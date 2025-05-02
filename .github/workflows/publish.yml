@@ -1,0 +1,28 @@
+name: 📦 NPM Publish
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Repo klonlanır
+        uses: actions/checkout@v3
+
+      - name: 🧰 Node.js Qurulur
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          registry-url: 'https://registry.npmjs.org/'
+
+      - name: 📦 Paketlər quraşdırılır
+        run: npm install
+
+      - name: 🚀 NPM-yə paylaşılır
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
